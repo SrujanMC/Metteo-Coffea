@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+(function(){
+    emailjs.init("FqI15pQ59KDgM7x2O");
+})();
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matteo Coffea | Church Street Landmark</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">Matteo Coffea</div>
+        <div class="menu-toggle" id="mobile-menu"><span></span><span></span><span></span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#visit">Visit</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal">
+            <span class="hero-subtitle">Church Street’s Coffee Landmark</span>
+            <h1>Where Bengaluru Meets <br><i>Handcrafted Perfection</i></h1>
+            <div class="hero-btns">
+                <button class="cta-button" onclick="openReservation()">Reserve a Table</button>
+                <a href="#menu" class="secondary-button">View Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section reveal">
+        <div class="container">
+            <span class="section-tag">Popular Choices</span>
+            <h2>Menu Highlights</h2>
+            <div class="menu-grid">
+                <div class="menu-card"><h4>Espresso</h4><p>Bold & Pure</p><span class="price">₹200</span></div>
+                <div class="menu-card"><h4>Cappuccino</h4><p>Classic Foam</p><span class="price">₹250</span></div>
+                <div class="menu-card"><h4>Blueberry Cake</h4><p>Highly Recommended</p><span class="price">₹320</span></div>
+                <div class="menu-card"><h4>Red Sauce Pasta</h4><p>Signature Flavor</p><span class="price">₹450</span></div>
+            </div>
+        </div>
+    </section>
+<br>
+    <section id="reviews" class="reviews-section reveal">
+        <div class="container">
+            <h2>What People Say</h2>
+            <div class="review-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>“The blueberry cake was delicious and well-made. Fantastic ambiance, especially the outdoor coffee seating.”</p>
+                    <span class="author">— Alex Joy Luke (Local Guide)</span>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>“As a cake lover from Germany, I give it 10 points. Cozy place with wonderful cakes.”</p>
+                    <span class="author">— Andreas Donder</span>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>“The pastas are quite good. A classic place on Church Street. We always enjoy catching up here.”</p>
+                    <span class="author">— Sally Josephine</span>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>“Ordered the red sauce pasta and peach iced tea. The food and drink were quite good!”</p>
+                    <span class="author">— Irene Samuel</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="location-highlight reveal">
+        <div class="container">
+            <h2>Heart of Bengaluru</h2>
+            <p>Steps away from Blossom Book House, Matteo Coffea sits in the city's most iconic street. A premium café experience with rich aroma, cozy ambiance, and urban energy.</p>
+            <p>Church Street is the soul of Bengaluru's walking culture, and we provide the perfect sanctuary to pause. Whether you are browsing books at Blossoms or enjoying a stroll near MG Road, our doors are open for that perfect cup of artisanal coffee.</p>
+            <p>Our space is designed to blend the high-energy vibe of the street with a sophisticated, calm interior. It's where deep conversations happen over freshly baked croissants and signature brews.</p>
+        </div>
+    </section>
+
+    <section id="visit" class="contact-section reveal">
+    <div class="container">
+        <div class="contact-flex">
+            <div class="contact-info">
+                <h2>Visit Us</h2>
+                <p>2, Church Street, Brigade Rd, Bengaluru, 560001</p>
+                <p class="phone">📞 080 4091 1633</p>
+                <div class="hours">Open Daily: 7:00 AM – 11:00 PM</div>
+            </div>
+                <!-- ✅ MAP GOES HERE -->
+        <div class="map">
+            <iframe 
+              src="https://www.google.com/maps?q=Matteo+Coffea+Church+Street+Bangalore&output=embed"
+              width="100%" 
+              height="300" 
+              style="border:0;" 
+              loading="lazy">
+            </iframe>
+        </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<div class="chatbot-container">
+    <div class="chat-toggle" onclick="toggleChat()">
+        <span class="notification-pulse"></span>
+        <span class="chat-icon">☕</span>
+    </div>
+    <div class="chat-window" id="chatBox">
+        <div class="chat-header">Ask Matteo</div>
+        <div class="chat-body" id="chatMessages">
+            <div class="bot-msg">Welcome  to  Matteo!  Ask  me  about  our  menu,  location,  or  reservations.</div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="userInput" placeholder="Ask something...">
+            <button onclick="sendMessage()">➤</button>
+        </div>
+    </div>
+</div>
+
+<script src="Jav.js"></script>
+<div id="resModal" class="modal-overlay">
+    <div class="modal-content reveal">
+        <span class="close-modal" onclick="closeReservation()">&times;</span>
+        <h2>Reserve a Table</h2>
+        <p>Join us at Church Street. Please provide your details.</p>
+        
+        <form id="reservationForm">
+            <div class="input-group">
+                <input type="text" id="resName" placeholder="Full Name" required>
+            </div>
+            <div class="input-group">
+                <input type="email" id="resEmail" placeholder="Email Address" required>
+            </div>
+            <div class="input-group-row">
+                <input type="date" id="resDate" required>
+                <input type="time" id="resTime" required>
+            </div>
+            <button type="submit" class="cta-button">Confirm Reservation</button>
+        </form>
+        <div id="formStatus" class="form-status"></div>
+    </div>
+</div>
+</body>
+</html>
